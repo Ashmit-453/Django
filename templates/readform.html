@@ -1,0 +1,11 @@
+{% include 'base.html'%}
+<h1> THIS IS OUR TASK FORM  </h1>
+{% for task in t %}
+   <p> {{task.title}} </p>
+  
+   <p> {{task.content}} </p>
+  <br> 
+  <a href="{% url 'UpdateTask' task.id %}"> Update Task </a>
+   <br> <a href="{% url 'deleteTask' task.id %}"> Delete Task </a>
+   <br> <br>
+{% endfor %}

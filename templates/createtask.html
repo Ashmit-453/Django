@@ -1,0 +1,12 @@
+{% include 'base.html'%}
+<h1> THIS IS OUR TASK FORM  </h1>
+<form method="POST" autocomplete="off">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <input type="submit" value="Submit"/>
+
+
+
+</form>

@@ -1,0 +1,13 @@
+{% include 'base.html'%}
+<h1> UPDATE FORM  </h1>
+<form method="POST" autocomplete="off">
+    {% csrf_token %}
+
+    <p> do you really want to delete{{object}}?<br>
+        <a href="{% url 'viewform' %}"> Go Back </a>
+
+    <input type="submit" value="Submit"/>
+
+
+
+</form>
